@@ -1,0 +1,122 @@
+/* Mengatur gaya untuk elemen h3 */
+.h3 {
+  font-size: 1.25 rem;
+}
+
+/* Mengatur margin dan padding untuk container */
+.container {
+  margin-top: 15px;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+
+/* Efek hover untuk tombol */
+.btn:hover {
+  color: #fff;
+}
+
+
+/* Efek focus untuk input teks */
+.input-text:focus {
+  box-shadow: 0px 0px 0px;
+  border-color: #f8c146;
+  outline: 0px;
+}
+
+/* Mengatur gaya untuk kontrol formulir */
+.form-control {
+  border: px solid #f8c146;
+}
+
+/* Mengatur lebar input dalam input group */
+.input-group.mb-3 input[type="text"] {
+  width: 300px;
+}
+
+/* Mengatur margin bawah untuk elemen h1 */
+h1 {
+  margin-bottom: 40px; 
+}
+
+/* Mengatur warna label */
+label {
+  color: #333; 
+}
+
+/* Mengatur gaya untuk tombol kirim */
+.btn-send {
+  font-weight: 300; 
+  text-transform: uppercase; 
+  letter-spacing: 0.2em; 
+  width: 80%;
+  margin-left: 3px;
+}
+
+/* Mengatur warna teks untuk pesan kesalahan */
+.help-block.with-errors {
+  color: #ff5050; 
+  margin-top: 5px; 
+}
+
+/* Mengatur margin untuk kartu */
+.card {
+  margin-left: 10px; 
+  margin-right: 10px; 
+}
+
+/* Mengatur padding untuk sel dalam grup formulir */
+.form-group td {
+  padding: 5px; 
+}
+
+/* Mengatur margin bawah untuk tombol Action */
+#btnAction {
+  margin-bottom: 5px;
+}
+
+
+/* link modal */
+.modal-header {
+  background-color: var(--first-color);
+  color: #fff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+
+
+/* untuk menempatkan alert di bawah baris unggah gambar */
+.alert-message {
+  position: relative;
+  margin-bottom: 2px;
+  z-index: 1;
+  background-color: #f8d7da; 
+  border-color: #f5c6cb; 
+  color: #721c24;
+  font-size: 0.8rem; 
+  padding: 0.1rem 0.1rem; 
+  margin-top: 0.5rem; 
+}
+
+.upload-container {
+  position: relative;
+}
+
+.upload-info {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+}
+
+
+
+/* table kolom deskripsi */
+.description {
+  max-width: 200px; 
+  overflow: hidden; 
+  white-space: nowrap; 
+  text-overflow: ellipsis;
+}

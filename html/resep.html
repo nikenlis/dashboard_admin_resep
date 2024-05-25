@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="css/resep.css" />
+    <!-- Tautan ke berkas CSS Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <!-- Modal untuk menambahkan resep baru -->
+    <div
+      class="modal fade"
+      id="add"
+      tabindex="-1"
+      aria-labelledby="modalResep"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Header Modal -->
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalResep">Upload Resep</h1>
+            <!-- Judul Modal -->
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+            <!-- Tombol Close Modal -->
+          </div>
+
+          <!-- Form untuk mengisi rincian resep -->
+          <form id="resepForm" role="form" class="p-4">
+            <!-- Input Nama Masakan -->
+            <div class="row my-1">
+              <div class="col-md-12">
+                <div class="form-group mb-3">
+                  <label for="namaMasakan">Nama Masakan</label>
+                  <input
+                    id="namaMasakan"
+                    type="text"
+                    name="namaMasakan"
+                    class="form-control"
+                    placeholder="Nama Masakan"
+                    required="required"
+                    data-error="namaMasakan is required."
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Checkbox untuk Kategori Masakan -->
+            <div class="row mb-3">
+              <div class="col-md-12">
+                <table class="form-group">
+                  <tbody>
+                    <tr>
+                      <td><label for="kategori">Kategori</label></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <!-- Checkbox kategori sayur mayur -->
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckChecked"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexCheckChecked"
+                          >
+                            Sayur Mayur
+                          </label>
+                        </div>
+                      </td>
+                      <td>
+                        <!-- Checkbox kategori murah -->
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckChecked"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexCheckChecked"
+                          >
+                            Murah
+                          </label>
+                        </div>
+                      </td>
+                      <td>
+                        <!-- Checkbox kategori diet -->
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckChecked"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexCheckChecked"
+                          >
+                            Diet
+                          </label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <!-- Checkbox kategori cepat saji -->
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckChecked"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexCheckChecked"
+                          >
+                            Cepat Saji
+                          </label>
+                        </div>
+                      </td>
+                      <td>
+                        <!-- Checkbox kategori asia -->
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckChecked"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexCheckChecked"
+                          >
+                            Asia
+                          </label>
+                        </div>
+                      </td>
+                      <td>
+                        <!-- Checkbox kategori sehat -->
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="flexCheckChecked"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="flexCheckChecked"
+                          >
+                            Sehat
+                          </label>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Input Deskripsi Masakan -->
+            <div class="row mb-3">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="deskripsiMasakan">Deskripsi</label>
+                  <textarea
+                    id="deskripsiMasakan"
+                    name="message"
+                    class="form-control"
+                    placeholder="Tulis deskripsi masakan disini"
+                    rows="4"
+                    required="required"
+                    data-error="Deskripsi wajib diisi"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- Input Resep Masakan -->
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group mb-3">
+                  <label for="resep">Tulis Resep</label>
+                  <textarea
+                    id="resep"
+                    name="message"
+                    class="form-control"
+                    placeholder="Tulis Resep"
+                    rows="4"
+                    required="required"
+                    data-error="Please, leave us a message."
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- Input dan tombol untuk mengunggah gambar -->
+            <div class="container mb-3">
+              <!-- Input dan tombol untuk mengunggah gambar -->
+              <div class="row upload-container">
+                <div class="col-md-12">
+                  <label for="gmabar">Masukkan Gambar</label>
+                </div>
+                <div class="col-md-12">
+                  <div class="input-group">
+                    <input type="file" class="form-control" id="customFile" />
+                    <button
+                      class="btn btn-secondary"
+                      type="button"
+                      onclick="showUploadAlertResep()"
+                    >
+                      Upload
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Keterangan upload -->
+              <div id="uploadInfo"></div>
+            </div>
+
+            <!-- Tombol untuk submit atau reset form -->
+            <div class="row">
+              <div class="btn-send col-md-2">
+                <input
+                  type="submit"
+                  class="btn btn-success btn-sm"
+                  value="Submit"
+                />
+              </div>
+              <div class="btn-send col-md-2">
+                <input
+                  type="submit"
+                  class="btn btn-outline-success btn-sm"
+                  value="Reset"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bagian Header -->
+    <header>
+      <h3>Resep Details</h3>
+      <!-- Judul -->
+      <div class="container">
+        <div class="row">
+          <!-- Kolom untuk input pencarian -->
+          <div class="col-6">
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control input-text border-warning rounded-2"
+                placeholder="Cari resep...."
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2"
+              />
+
+              <!-- Tombol pencarian -->
+              <div class="input-group-append justify-content-center">
+                <button
+                  class="btn btn-outline-warning btn-lg d-flex align-items-center"
+                  type="button"
+                >
+                  <ion-icon
+                    class="btn-outline-warning"
+                    name="search-outline"
+                  ></ion-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kolom untuk tombol tambah resep -->
+          <div class="col-6">
+            <button
+              type="button"
+              class="btn btn-warning text-white"
+              data-bs-toggle="modal"
+              data-bs-target="#add"
+            >
+              + Tambah Resep
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <!-- Tabel untuk menampilkan daftar resep -->
+        <div class="table">
+          <div class="card-body p-0">
+            <table class="table table-hover table-bordered">
+              <thead>
+                <tr>
+                  <!-- Kolom-kolom pada tabel -->
+                  <th scope="col">No</th>
+                  <th scope="col">Nama</th>
+                  <th scope="col">Kategori</th>
+                  <th scope="col">Deskripsi</th>
+                  <th scope="col">Gambar</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Ayam Goreng Lengkuas</td>
+                  <td>Murah</td>
+                  <td class="description">Ayam goreng berempah dan gurih</td>
+                  <td>
+                    <img
+                      src="src/img_resep1.jpg"
+                      width="50"
+                      height="50"
+                      class="rounded float-start"
+                      alt="..."
+                    />
+                  </td>
+                  <td class="text-right">
+                    <button
+                      id="btnAction"
+                      type="button"
+                      class="btn btn-primary rounded-pill btn-sm"
+                      style="width: 80px"
+                    >
+                      EDIT
+                    </button>
+                    <button
+                      id="btnAction"
+                      type="button"
+                      class="btn btn-danger rounded-pill btn-sm"
+                      style="width: 80px"
+                    >
+                      DELETE
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Salad</td>
+                  <td>Sehat</td>
+                  <td class="description">Salad sayur segar rendah lemak</td>
+                  <td>
+                    <img
+                      src="src/img_resep2.jpg"
+                      width="50"
+                      height="50"
+                      class="rounded float-start"
+                      alt="..."
+                    />
+                  </td>
+                  <td class="text-right">
+                    <button
+                      id="btnAction"
+                      type="button"
+                      class="btn btn-primary rounded-pill btn-sm"
+                      style="width: 80px"
+                    >
+                      EDIT
+                    </button>
+                    <button
+                      id="btnAction"
+                      type="button"
+                      class="btn btn-danger rounded-pill btn-sm"
+                      style="width: 80px"
+                    >
+                      DELETE
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Humberger</td>
+                  <td>Fast Food</td>
+                  <td class="description">Humberger dengan daging juicy</td>
+                  <td>
+                    <img
+                      src="src/img_resep3.jpg"
+                      width="50"
+                      height="50"
+                      class="rounded float-start"
+                      alt="..."
+                    />
+                  </td>
+                  <td class="text-right">
+                    <button
+                      id="btnAction"
+                      type="button"
+                      class="btn btn-primary rounded-pill btn-sm"
+                      style="width: 80px"
+                    >
+                      EDIT
+                    </button>
+                    <button
+                      id="btnAction"
+                      type="button"
+                      class="btn btn-danger rounded-pill btn-sm"
+                      style="width: 80px"
+                    >
+                      DELETE
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+/* Mengatur ukuran font untuk elemen h3 */
+.h3 {
+  font-size: 1.25 rem;
+}
+
+/* Mengatur margin atas dan sisi serta padding kiri-kanan untuk kontainer */
+.container {
+  margin-top: 15px;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+/* Mengubah warna teks tombol saat dihover */
+.btn:hover {
+  color: #fff;
+}
+
+/* Mengatur tampilan input saat mendapat fokus */
+.input-text:focus {
+  box-shadow: 0px 0px 0px;
+  border-color: #f8c146;
+  outline: 0px;
+}
+
+/* Mengatur tampilan form control */
+.form-control {
+  border: px solid #f8c146;
+}
+
+/* Mengatur lebar input teks di dalam input group */
+.input-group.mb-3 input[type="text"] {
+  width: 300px;
+}
+
+/* Mengatur margin bawah untuk elemen h1 */
+h1 {
+  margin-bottom: 40px;
+}
+
+/* Mengatur warna teks label */
+label {
+  color: #333;
+}
+
+/* Mengatur tampilan tombol 'SEND' */
+.btn-send {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  width: 80%;
+  margin-left: 3px;
+}
+
+/* Mengatur tampilan pesan bantuan dengan error */
+.help-block.with-errors {
+  color: #ff5050;
+  margin-top: 5px;
+}
+
+/* Mengatur margin kiri-kanan untuk kartu */
+.card {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Mengatur padding untuk sel dalam grup formulir */
+.form-group td {
+  padding: 5px;
+}
+
+/* Mengatur margin bawah untuk tombol Action */
+#btnAction {
+  margin-bottom: 5px;
+}
+
+/* link modal */
+.modal-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+.modal-content {
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.modal-header {
+  background-color: var(--first-color);
+  color: #fff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.modal-body {
+  padding: 20px;
+}
+.btn-outline-secondary {
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.close {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #000;
+}
+
+/* icon link dalam kolom link table */
+.link-icon {
+  color: #6c757d;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.center-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* table kolom deskripsi */
+.description {
+  max-width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

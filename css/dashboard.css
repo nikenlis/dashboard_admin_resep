@@ -1,0 +1,12 @@
+
+/* Mengatur margin atas untuk container dengan kelas .container-mycustom */
+.container-mycustome{
+ margin-top: 10px;
+}
+
+
+.card {
+    margin-bottom: 20px; /* Menambahkan ruang di bawah setiap kartu */
+    background-color: #D9D9D9; /* Memberikan warna latar belakang untuk kartu */
+
+}
